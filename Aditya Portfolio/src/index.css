@@ -1,0 +1,261 @@
+@import "tailwindcss";
+
+@layer base {
+    html {
+        @apply bg-white text-[#144272];
+    }
+
+    .dark html {
+        @apply bg-[#0A2647] text-white;
+    }
+}
+
+/* Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0B2447;
+    /* Matches your dark base background */
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #205295, #2C74B3);
+    /* Subtle gradient */
+    border-radius: 9999px;
+    border: 2px solid #0B2447;
+    /* Blends with track background */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, #00c6ff, #0072ff);
+    /* Lighter on hover */
+}
+
+
+@layer utilities {
+
+    @keyframes spin-slow {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    .animate-spin-slow {
+        animation: spin-slow 15s linear infinite;
+    }
+
+    @keyframes subtlePulse {
+
+        0%,
+        100% {
+            text-shadow: 0 0 6px rgba(0, 198, 255, 0.4);
+        }
+
+        50% {
+            text-shadow: 0 0 12px rgba(0, 198, 255, 0.6);
+        }
+    }
+
+    .pulse-glow {
+        animation: subtlePulse 2.5s ease-in-out infinite;
+    }
+
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+
+        to {
+            width: 100%;
+        }
+    }
+
+    @keyframes blinkCursor {
+
+        0%,
+        100% {
+            border-color: transparent;
+        }
+
+        50% {
+            border-color: #00ff84;
+        }
+    }
+
+    .typewriter {
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+        border-right: 2px solid #00ff84;
+        animation:
+            typing 3s steps(30, end),
+            blinkCursor 0.75s step-end infinite;
+    }
+
+    @keyframes blink {
+
+        0%,
+        49% {
+            opacity: 1;
+        }
+
+        50%,
+        100% {
+            opacity: 0;
+        }
+    }
+
+    .blink-cursor::after {
+        content: "$";
+        animation: blink 1s infinite;
+        color: #00ff84;
+        margin-left: 0.3rem;
+    }
+
+    @keyframes pulse {
+
+        0%,
+        100% {
+            opacity: 0.4;
+            transform: scale(1);
+        }
+
+        50% {
+            opacity: 0.8;
+            transform: scale(1.05);
+        }
+    }
+
+    .animate-pulse {
+        animation: pulse 2.5s ease-in-out infinite;
+    }
+
+    .animate-pulse-slow {
+        animation: pulse 6s ease-in-out infinite;
+    }
+
+    .modern-gradient {
+        background: linear-gradient(135deg, #000000, #0A2647, #144272);
+        position: relative;
+    }
+
+    .glow-effect {
+        text-shadow: 0 0 10px rgba(32, 82, 149, 0.5);
+    }
+
+    .hover-lift {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hover-lift:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .text-glow-cyan {
+        text-shadow: 0 0 8px rgba(0, 255, 255, 0.6), 0 0 16px rgba(0, 255, 255, 0.3);
+    }
+
+    .gradient-text-hero {
+        background: linear-gradient(to right, #00c6ff, #0072ff);
+        /* pure cyan to blue */
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        text-shadow:
+            0 0 6px rgba(0, 198, 255, 0.5),
+            0 0 12px rgba(0, 114, 255, 0.3);
+    }
+
+
+    .gradient-text {
+        background: linear-gradient(to right, #4facfe, #00f2fe);
+        text-shadow: 0 0 8px rgba(0, 255, 255, 0.25);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+
+    .glass-card {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(20px);
+        border-radius: 20px;
+        transition: all 0.3s ease;
+    }
+
+    .glass-card:hover {
+        box-shadow: 0 0 30px rgba(44, 116, 179, 0.4);
+    }
+
+
+    .glass-blur {
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+
+    .gradient-border {
+        border: double 1px transparent;
+        background-image: linear-gradient(black, black),
+            linear-gradient(135deg, #0A2647, #205295);
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+    }
+
+    .skill-card {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 1rem;
+        padding: 1rem;
+        position: relative;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 0 0 rgba(0, 255, 255, 0);
+        transform-style: preserve-3d;
+    }
+
+    .skill-card:hover {
+        transform: translateY(-5px) rotateX(3deg) rotateY(3deg);
+        box-shadow: 0 10px 40px rgba(0, 255, 255, 0.25);
+    }
+
+    .skill-card::before {
+        content: "";
+        position: absolute;
+        inset: -2px;
+        border-radius: inherit;
+        background: conic-gradient(from 180deg at 50% 50%,
+                #00c6ff,
+                #0072ff,
+                #00f9ff,
+                #00c6ff);
+        filter: blur(30px);
+        opacity: 0.25;
+        z-index: -1;
+    }
+
+
+    .light-text {
+        color: #144272;
+    }
+
+    .light-border {
+        border-color: #144272;
+    }
+
+    .light-gradient {
+        background: linear-gradient(135deg, #DCE8F2, #ffffff);
+    }
+
+    .light-glow {
+        text-shadow: 0 0 5px rgba(20, 66, 114, 0.2);
+    }
+
+}
