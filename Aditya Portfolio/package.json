@@ -1,7 +1,7 @@
 {
-  "name": "AdityaSingh",
+  "name": "adityasingh-portfolio",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -11,7 +11,6 @@
   },
   "dependencies": {
     "@splinetool/react-spline": "^4.0.0",
-    "@studio-freight/lenis": "^1.0.42",
     "@tsparticles/react": "^3.0.0",
     "framer-motion": "^12.6.5",
     "lenis": "^1.2.3",
@@ -21,6 +20,7 @@
     "react-hot-toast": "^2.5.2",
     "react-icons": "^5.4.0",
     "react-intersection-observer": "^9.16.0",
+    "react-parallax-tilt": "^1.7.294",
     "react-type-animation": "^3.2.0",
     "tsparticles": "^3.8.1"
   },
