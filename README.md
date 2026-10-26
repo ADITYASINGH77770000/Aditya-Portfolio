@@ -9,4 +9,3 @@ python -m http.server 8765
 ```
 
 Open `http://localhost:8765/`.
-

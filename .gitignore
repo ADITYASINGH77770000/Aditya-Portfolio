@@ -1,0 +1,6 @@
+.claude/
+.vercel/
+tools/
+assets/paddock/aditya-portrait-original.jpeg
+__pycache__/
+*.pyc

@@ -1,0 +1,22 @@
+<svg width="196" height="40" viewBox="0 0 196 40" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="afGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"  stop-color="#00f5a0"/>
+      <stop offset="55%" stop-color="#0be0ff"/>
+      <stop offset="100%" stop-color="#a55efd"/>
+    </linearGradient>
+  </defs>
+  <!-- Emblem: hexagon forge with an "A" chevron and a spark -->
+  <g transform="translate(3,2.5)">
+    <polygon points="17,1 32,9.5 32,26.5 17,35 2,26.5 2,9.5"
+             fill="rgba(11,224,255,0.06)" stroke="url(#afGrad)" stroke-width="1.8"/>
+    <path d="M9 27 L17 11 L25 27" fill="none" stroke="url(#afGrad)"
+          stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="12.4" y1="22" x2="21.6" y2="22" stroke="url(#afGrad)"
+          stroke-width="2.6" stroke-linecap="round"/>
+    <circle cx="17" cy="7" r="1.9" fill="#0be0ff"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="44" y="26.5" font-family="'Inter','Segoe UI',sans-serif" font-weight="800"
+        font-size="20" letter-spacing="-0.5" fill="url(#afGrad)">AlphaForge</text>
+</svg>
